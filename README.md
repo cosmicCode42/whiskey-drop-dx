@@ -1,116 +1,164 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Whiskey Drop (Deluxe)
 
-Welcome USER_NAME,
+Fourth Milestone Project for the Web Development course offered by Code Institute. A site for purchasing quality whiskey.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Table of Contents
+1. [UX](#ux)
+	- [Project Goals](#project-goals)
+	- [User Goals](#user-goals)
+	- [User Stories](#user-stories)
+	- [Design Choices](#design-choices)
+2. [Planning](#planning)
+	- [Wireframes](#wireframes)
+ 	- [Schema](#schema)
+3. [Future Additions](#future-additions)
+4. [Testing](#testing)
+	- [User Stories Testing](#user-stories-testing)
+ 	- [Bugfixes](#bugfixes)
+5. [Technologies Used](#technologies-used)
+6. [Deployment](#deployment)
+7. [Credit](#credit)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 14, 2024**
+## UX
 
-## Gitpod Reminders
+### Project Goals
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Whiskey Drop
 
-`python3 -m http.server`
+### User Goals
 
-A blue button should appear to click: _Make Public_,
+- Simple design.
+- Visually appealing.
+- Easy to navigate.
 
-Another blue button should appear to click: _Open Browser_.
+### User Stories
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+- As a user, I want ?
+- As a user, I want ?
+- As a user, I want ?
+- As a user, I want ?
+- As a user, I want ?
+- As a user, I want ?
 
-A blue button should appear to click: _Make Public_,
+### Design Choices
 
-Another blue button should appear to click: _Open Browser_.
+#### Interface
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Pending.
 
-To log into the Heroku toolbelt CLI:
+## Planning
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Wireframes
+Pending.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+### Schema
+Pending.
 
-------
+## Testing
 
-## Release History
+<!-- The site has been tested extensively to ensure the best user experience across multiple screen sizes.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The developer used **W3C CSS Validation Service** and **W3C Markup Validation Service** to check the validity of the HTML and CSS. -->
 
-**June 14, 2024,** Temporarily remove Mongo until key issue is resolved
+### Testing Process
+<!-- 
+To make sure the site renders acceptably across several screen sizes, I made liberal use of the DevTools offered by Google Chrome, as well as testing load times, mobile and desktop, with the Lighthouse Chrome extension.
 
-**May 28 2024:** Fix Mongo and Links installs
+![Testing main page desktop version.](docs/lighthouse-test-desktop.png)
 
-**April 26 2024:** Update node version to 16
+![Testing main page mobile version.](docs/lighthouse-test-mobile.png) -->
 
-**September 20 2023:** Update Python version to 3.9.17.
+### User Stories Testing
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+As a user of the site, I want:
+- ?
+	- ?
+ 	- ?
+- ?
+	- ?
+ 	- ?
+- ?
+	- ?
+ 	- ?
+- ?
+	- ?
+ 	- ?
+- ?
+	- ?
+ 	- ?
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Bugfixes
+- ?
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Technologies Used
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Building
+- [HTML5](https://developer.mozilla.org/en-US/docs/Learn/HTML)
+- [CSS53](https://developer.mozilla.org/en-US/docs/Learn/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [Python](https://docs.python.org/3/)
+    - [Django](https://docs.djangoproject.com/en/5.0/)
+- [PostgreSQL](https://www.postgresql.org/docs/)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+<!-- ### Testing
+- [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Validation
+- [W3C CSS Validation](https://jigsaw.w3.org/css-validator/#validate_by_input)
+- [W3C Markup Validation](https://validator.w3.org/#validate_by_input) -->
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Deployment
+Deploy to Heroku or a similar website hosting and rendering service. The html files can also be opened from local storage (this requires downloading all files in a dedicated folder; this can be done with the git pull command), though the pages won't properly work without the Python code added.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+<!-- To deploy this site to Heroku from [its GitHub repository](https://github.com/cosmicCode42/OC-archive), the following steps were taken.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+1. Log in to a PostgreSQL database service.
+2. Create a new PostgreSQL database. On Aiven, this is done by creating a new service. You must create a project beforehand, then add the service inside that project.
+3. Copy the database URL (service URI on Aiven).
+4. Make sure to create a `requirements.txt` file with the terminal command `pip freeze --local > requirements.txt`. Make sure to save the file and add, commit and push it to your repository. (Unnecessary here since this project already has a requirements.txt file.)
+5. Make sure to create a Procfile and add the command `web: python run.py1` into it. Make sure to save the file and add, commit and push it to your repository. (Unnecessary here since this project already has a Procfile.)
+6. Your `__init__.py` file will require a few lines of code (my `__init__.py` already has these so if copying mine this can be safely ignored). Refer to [oc-archive-troubleshoot](oc-archive-troubleshoot.txt) for the exact code.
+Make sure to save the file and add, commit and push it to your repository.
+8. Log in to [Heroku](https://www.heroku.com/).
+9. Create a new app.
+10. Go to the Settings of your app and click Reveal Config Vars. Add your copied database URL as `DATABASE_URL`, then add each of the other environmental variables: `DEBUG` (`True` or `False` depending on the current state of the project), `IP` (usually set to `0.0.0.0`), `PORT` (usually `5000`), `SECRET_KEY` (you make a unique one).
+11. Go to the Deploy tab of your app. In the Deployment method section, select "Connect to GitHub". You can click "Enable Automatic Deploys" so that each time you commit to your GitHub repository, the Heroku app is redeployed.
+12. Click the "More" button next to "Open App" and select "Run console". Run `python3` in the Heroku console. -->
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<!-- If the steps are followed correctly, when opening the app, the website should be fully functional. The new database will be empty, so you will have to add new users -->
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+At the moment of submitting the milestone project, the development branch and main branch are identical.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### How to run the project locally
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+To clone this project from GitHub:
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+1. Follow this link to [its GitHub repository](https://github.com/cosmicCode42/whiskey-drop-dx).
+2. Under the Code dropdown menu in the Code section, you can copy the HTTPS link or download a ZIP.
+3. A copied link can be used to make a pull request using Git Bash. 
+	1. Change the current working directory to one where you want the clone to be made.
+	2. Run ``git init`` to initialise a local repository.
+	3. Run ``git remote add origin`` and paste the copied link right after. Running this command sets the GitHub repository as the 'origin'.
+	4. Run ``git branch -M main`` if the local repository doesn't have a main branch.
+	5. Run ``git pull origin main`` to make the pull request.
 
-------
+### Cloning project into GitPod
 
-## FAQ about the uptime script
+To clone this project into GitPod, you will need:
+- A [GitHub](https://github.com) account.
+- A Chrome browser or compatible browser.
 
-**Why have you added this script?**
+Then follow these steps:
+1. Install the [GitPod browser extension for Chrome](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+2. Restart the browser after installation.
+3. Log into [GitPod](https://www.gitpod.io) with your GitHub account.
+4. Navigate into the [Project GitHub repository](https://github.com/cosmicCode42/whiskey-drop-dx).
+5. Click the green **GitPod** button in the top right corner of the repository. This will trigger a new GitPod workspace to be created from the code in GitHub where you can work normally.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Credit
 
-**How will this affect me?**
+### Code
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+Code not written by me and not covered below is attributed to proper sources in comments within the code. All other code is written by me.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+#### Guidance and Inspiration
