@@ -1,16 +1,16 @@
 """
-ASGI config for whiskeydropdx project.
+ASGI config for whiskey_drop_dx project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
 For more information on this file, see
-https://docs.djangoproject.com/en/3.2/howto/deployment/asgi/
+https://docs.djangoproject.com/en/5.0/howto/deployment/asgi/
 """
 
 import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whiskeydropdx.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'whiskey_drop_dx.settings')
 
 application = get_asgi_application()
