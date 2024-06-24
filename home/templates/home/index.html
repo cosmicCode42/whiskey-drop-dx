@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Callout -->
+<div class="container-fluid callout-container">    
+    <div class="opaque-overlay">&nbsp;</div>
+    <div class="row">
+        <div class="col-12">
+            <section class="callout jumbotron text-center">
+                <h1 class="jumbotron-header">The finest whiskeys delivered to your doorstep.</h1>
+                <hr class="block-divider block-divider--orange">
+                <p class="lead">Sign up today to start receiving the world's best whiskeys every month.
+                    <s class="d-none d-sm-inline">€19.99</s>
+                    <span class="d-inline d-sm-none"><br></span>
+                    <strong><mark>First one is free!</mark></strong></p>
+                <button class="btn btn--red btn--cta btn-lg" data-toggle="modal" data-target="#signUpModal">Sign
+                    Up!</button>
+                <p class="text-muted"><small>You must be over 18 to sign up to our service. Please, drink
+                        responsibly.</small></p>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- Callout done. -->
+
+<div class="modal" tabindex="-1" id="signUpModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sign Up To Whiskey Drop!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="repeatPassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="repeatPassword">
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

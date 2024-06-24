@@ -1,0 +1,233 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    {% block meta %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block core_css %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+    {% endblock %}
+    
+    {% block extra_css %}
+    {% endblock %}
+
+    {% block core_js %}
+    <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
+    </script>
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+    <title>Whiskey Drop {% block extra_title %}{% endblock %} </title>
+</head>
+
+<body>
+    <div class="container-fluid navalert-container">
+        <div class="container-fluid alert-container">
+            <div class="row d-none d-sm-block">
+                <div class="col-12">
+                    <div class="site-wide-alert alert alert-warning"><strong>Sale Now On!</strong> We've got a sale on.
+                        Get a 12-month subscription for the price of 6! <a href="">See here for details!</a></div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark navbar-expand-sm">
+            <a href="/" class="navbar-brand">Whiskey Drop</a>
+            <!-- Create a button to collapse the menu buttons into a small button on mobile screens -->
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- The menu buttons wrapped in a div to be collapsible via the above code -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item mr-2"><a class="nav-link" href="/about">About</a></li>
+                    <!-- A dropdown menu inside the collapsible - this leads to a selection of whiskeys -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Whiskeys
+                        </a>
+                        <!-- Here is the selection of whiskeys -->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Irish</a>
+                            <a class="dropdown-item" href="#">Scotch</a>
+                            <a class="dropdown-item" href="#">Japanese</a>
+                            <a class="dropdown-item" href="#">American</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-none d-md-block">
+                <p class="navbar-text my-auto mr-2"><em>Great whiskey delivered to your door!</em></p>
+                {% if request.user.is_authenticated %}
+                <a class="btn btn--red btn--cta" href="{% url 'profile' %}">My Profile</a>
+                <a class="btn btn--red btn--cta" href="{% url 'account_logout' %}">Logout</a>
+                {% else %}
+                <a class="btn btn--red btn--cta" href="{% url 'account_signup' %}">Register</a>
+                <a class="btn btn--red btn--cta" href="{% url 'account_login' %}">Login</a>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Quotes -->
+    <!-- <div class="container-wrapper">
+        <div class="container quotes-container content-container">
+            <section class="quotes">
+                <div class="row">
+                    <div class="col-12 page-header">
+                        <h2 class="text-uppercase">Quotes:</h2>
+                        <hr class="block-divider block-divider--short">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="media">
+                            <div class="d-none d-sm-block">
+                                <img src="assets/images/girl-image.png" class="rounded-circle mr-3" height="100"
+                                    width="100" alt="Jane Doe">
+                            </div>
+                            <div class="media-body">
+                                <blockquote class="blockquote">
+                                    <p>I've been introduced to more than 10 great international whiskeys I never knew
+                                        about.
+                                    </p>
+                                    <p>- Jane Doe</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="media">
+                            <div class="d-none d-sm-block">
+                                <img src="assets/images/guy-image.png" class="rounded-circle mr-3" height="100"
+                                    width="100" alt="Jane Doe">
+                            </div>
+                            <div class="media-body">
+                                <blockquote class="blockquote">
+                                    <p>I haven't been sober for months!</p>
+                                    <p>- Jane Doe</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div> -->
+    <!-- Quotes done; section done. -->
+
+    <!-- Features -->
+    <!-- <div class="container-wrapper container-wrapper--red">
+        <div class="container features-container content-container">
+            <section class="features">
+                <div class="row">
+                    <div class="col-12 page-header">
+                        <h2 class="text-uppercase">Features:</h2>
+                        <hr class="block-divider block-divider--short block-divider--white">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="feature">
+                            <-- The icon is in the i (as it is in the other two features); the span forms the NEW! badge on the page
+                            <h3><i class="fas fa-gift d-none d-sm-block"></i> Feature 1 <span
+                                    class="badge badge-success">New!</span></h3>
+                            <p>Description here.</p>
+                            <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="feature">
+                            <h3><i class="fas fa-credit-card d-none d-sm-block"></i> Feature 2</h3>
+                            <p>Description here.</p>
+                            <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                        </div>
+                    </div>
+                    <-- This Feature doesn't actually appear on Medium screens, but it does appear on Large screens.
+                    <div class="col-12 d-md-none d-lg-block col-lg-4">
+                        <div class="feature">
+                            <h3><i class="fas fa-times-circle d-none d-sm-block"></i> Feature 3</h3>
+                            <p>Description here.</p>
+                            <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div> -->
+    <!-- Features end here. -->
+
+    <!-- Monthly Favourites -->
+    <!-- <div class="container-wrapper">
+        <div class="container month-fav-container content-container">
+            <section class="faves">
+                <div class="col-12 page-header">
+                    <h2 class="text-uppercase">Monthly favorites</h2>
+                    <hr class="block-divider block-divider--short">
+                </div>
+                <table class="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Origin</th>
+                    </tr>
+                    <tr>
+                        <td>First</td>
+                        <td>Place</td>
+                    </tr>
+                    <tr>
+                        <td>Second</td>
+                        <td>Place</td>
+                    </tr>
+                    <tr>
+                        <td>Third</td>
+                        <td>Place</td>
+                    </tr>
+                    <tr>
+                        <td>Fourth</td>
+                        <td>Place</td>
+                    </tr>
+                    <tr>
+                        <td>Fifth</td>
+                        <td>Place</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </div> -->
+    <!-- Monthly favourites end here. -->
+</body>
+
+</html>
