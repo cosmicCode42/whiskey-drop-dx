@@ -6,11 +6,14 @@ from .models import Product
 
 # Create your views here.
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """ A view to show individual whiskey details """
+
+    products = Product.objects.all()
     
     product = get_object_or_404(Product, pk=product_id)
 
     context = {
+        'products': products,
         'product': product,
     }
     

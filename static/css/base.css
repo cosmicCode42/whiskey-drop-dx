@@ -3,6 +3,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    height: calc(100vh - 40px);
 }
 
 /* .container-wrapper {
@@ -73,6 +74,10 @@ body {
 
 .quotes .page-header {
     margin-bottom: 25px;
+}
+
+.header-container {
+    padding-top: 40px;
 }
 
 /* Block dividers */
@@ -202,3 +207,24 @@ body {
 }
 
 /* End of the code from Whiskey Drop. -----*/
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #fff;
+    z-index: -1;
+}
+
+/* pad the top for most pages for navbar on mobile */
+@media (max-width: 426px) {
+    .header-container {
+        padding-top: 70px;
+    }
+
+    .body {
+        height: calc(100vh - 70px);
+    }
+}
