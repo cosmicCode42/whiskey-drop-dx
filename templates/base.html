@@ -57,26 +57,33 @@
             <!-- The menu buttons wrapped in a div to be collapsible via the above code -->
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto">
-                    <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
+                    <li class="active nav-item mr-2"><a class="nav-link nav-bold" href="/">Home</a></li>
                     <li class="nav-item mr-2"><button class="nav-link btn" data-toggle="modal" data-target="#aboutModal">About</button></li>
                     <!-- A dropdown menu inside the collapsible - this leads to a selection of whiskeys -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        <a class="nav-link  nav-bold dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Whiskeys
                         </a>
                         <!-- Here is the selection of whiskeys -->
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Irish</a>
-                            <a class="dropdown-item" href="#">Scotch</a>
-                            <a class="dropdown-item" href="#">Japanese</a>
-                            <a class="dropdown-item" href="#">American</a>
+                            <a class="dropdown-item nav-bold" href="#">Irish</a>
+                            <a class="dropdown-item nav-bold" href="#">Scotch</a>
+                            <a class="dropdown-item nav-bold" href="#">Japanese</a>
+                            <a class="dropdown-item nav-bold" href="#">American</a>
                         </div>
                     </li>
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'profile' %}">My Profile</a></li>
+                    <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
+                    {% else %}
+                    <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'account_signup' %}">Register</a></li>
+                    <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
+                    {% endif %}
                 </ul>
             </div>
             <div class="d-none d-md-block">
-                <p class="navbar-text my-auto mr-2"><em>Great whiskey delivered to your door!</em></p>
+                <p class="navbar-text my-auto mr-2 d-md-none d-lg-inline-block"><em>Great whiskey delivered to your door!</em></p>
                 {% if request.user.is_authenticated %}
                 <a class="navbar-text btn" href="{% url 'profile' %}">My Profile</a>
                 <a class="navbar-text btn" href="{% url 'account_logout' %}">Logout</a>
