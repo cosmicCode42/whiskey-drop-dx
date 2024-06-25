@@ -90,6 +90,8 @@ As a user of the site, I want:
 ### Bugfixes
 - Problem: The top of the product details pages were covered by the navbar.
 	- Solution: Added padding to the `heading-container` in `base.css` to account for this, and adjusted the `body` to compensate.
+- Problem: The `quantity_input_script` I added to `product_detail` wasn't working - pressing either the + or - button just added directly to the cart.
+	- Solution: I hadn't added a `{% block postloadjs %}` to my `base.html`, which is where the `quantity_input_script` was located. Adding the postloadjs block immediately fixed the issue.
 
 ## Technologies Used
 
