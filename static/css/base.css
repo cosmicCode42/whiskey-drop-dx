@@ -218,6 +218,11 @@ body {
     z-index: -1;
 }
 
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* pad the top for most pages for navbar on mobile */
 @media (max-width: 426px) {
     .header-container {
