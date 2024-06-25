@@ -46,16 +46,8 @@
 </head>
 
 <body>
-    <div class="container-fluid navalert-container">
-        <div class="container-fluid alert-container">
-            <div class="row d-none d-sm-block">
-                <div class="col-12">
-                    <div class="site-wide-alert alert alert-warning"><strong>Sale Now On!</strong> We've got a sale on.
-                        Get a 12-month subscription for the price of 6! <a href="">See here for details!</a></div>
-                </div>
-            </div>
-        </div>
-        <nav class="navbar navbar-dark navbar-expand-sm">
+    <div class="container-fluid">
+        <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
             <a href="/" class="navbar-brand">Whiskey Drop</a>
             <!-- Create a button to collapse the menu buttons into a small button on mobile screens -->
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -66,7 +58,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto">
                     <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item mr-2"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item mr-2"><button class="nav-link btn" data-toggle="modal" data-target="#aboutModal">About</button></li>
                     <!-- A dropdown menu inside the collapsible - this leads to a selection of whiskeys -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -86,11 +78,11 @@
             <div class="d-none d-md-block">
                 <p class="navbar-text my-auto mr-2"><em>Great whiskey delivered to your door!</em></p>
                 {% if request.user.is_authenticated %}
-                <a class="btn btn--red btn--cta" href="{% url 'profile' %}">My Profile</a>
-                <a class="btn btn--red btn--cta" href="{% url 'account_logout' %}">Logout</a>
+                <a class="navbar-text btn" href="{% url 'profile' %}">My Profile</a>
+                <a class="navbar-text btn" href="{% url 'account_logout' %}">Logout</a>
                 {% else %}
-                <a class="btn btn--red btn--cta" href="{% url 'account_signup' %}">Register</a>
-                <a class="btn btn--red btn--cta" href="{% url 'account_login' %}">Login</a>
+                <a class="navbar-text btn" href="{% url 'account_signup' %}">Register</a>
+                <a class="navbar-text btn" href="{% url 'account_login' %}">Login</a>
                 {% endif %}
             </div>
         </nav>
@@ -102,7 +94,21 @@
     {% block content %}
     {% endblock %}
 
-
+<div class="modal" tabindex="-1" id="aboutModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">About Whiskey Drop</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Whiskey Drop started as the dream of two whiskey enthusiasts and has grown to one of the largest providers of quality whiskey in the world.</p>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>

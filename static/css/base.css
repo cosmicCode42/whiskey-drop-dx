@@ -121,6 +121,10 @@ body {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
+.navbar-dark {
+    background-color: #000;
+}
+
 .navbar-brand {
     font-weight: bold;
 }
