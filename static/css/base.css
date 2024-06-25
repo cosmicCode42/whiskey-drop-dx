@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 75px);
 }
 
 /* .container-wrapper {
@@ -77,7 +77,7 @@ body {
 }
 
 .header-container {
-    padding-top: 60px;
+    padding-top: 75px;
 }
 
 /* Block dividers */
@@ -221,10 +221,10 @@ body {
 /* pad the top for most pages for navbar on mobile */
 @media (max-width: 426px) {
     .header-container {
-        padding-top: 90px;
+        padding-top: 82px;
     }
 
     .body {
-        height: calc(100vh - 90px);
+        height: calc(100vh - 82px);
     }
 }
