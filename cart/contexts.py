@@ -2,6 +2,7 @@ from decimal import Decimal
 from django.conf import settings
 
 def cart_contents(request):
+    """ allows use of 'cart_contents' across the site"""
 
     cart_items = []
     grand_total = 0
