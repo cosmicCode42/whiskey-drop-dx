@@ -88,7 +88,8 @@ As a user of the site, I want:
  	- ?
 
 ### Bugfixes
-- ?
+- Problem: The top of the product details pages were covered by the navbar.
+	- Solution: Added padding to the `heading-container` in `base.css` to account for this, and adjusted the `body` to compensate.
 
 ## Technologies Used
 
