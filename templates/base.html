@@ -70,9 +70,6 @@
                             {% for product in products %}
                             <a class="dropdown-item nav-bold" href="{% url 'product_detail' product.id %}">{{ product.name }}</a>
                             {% endfor %}
-                            <!-- <a class="dropdown-item nav-bold" href="#">Scotch</a>
-                            <a class="dropdown-item nav-bold" href="#">Japanese</a>
-                            <a class="dropdown-item nav-bold" href="#">American</a> -->
                         </div>
                     </li>
                     {% if request.user.is_authenticated %}
@@ -93,6 +90,20 @@
                 <a class="navbar-text btn" href="{% url 'account_signup' %}">Register</a>
                 <a class="navbar-text btn" href="{% url 'account_login' %}">Login</a>
                 {% endif %}
+            </div>
+            <div class="d-inline-item">
+                <a href="{% url 'view_cart' %}" class="nav-link">
+                    <div class="text-center">
+                        <div><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+                        <p class="my-0">
+                            {% if grand_total %}
+                                £{{ grand_total|floatformat:2 }}
+                            {% else %}
+                                £0.00
+                            {% endif %}
+                        </p>
+                    </div>
+                </a>
             </div>
         </nav>
     </div>
