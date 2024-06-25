@@ -1,0 +1,46 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001340155",
+      "name": "Irish",
+      "description": "Whiskey prepared in the Irish fashion.",
+      "price": 83.99,
+      "rating": 4.6
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001600425",
+      "name": "Scotch",
+      "description": "Whiskey prepared in the Irish fashion.",
+      "price": 76.99,
+      "rating": 4.6
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001730010",
+      "name": "Japanese",
+      "description": "Whiskey prepared in the Japanese fashion.",
+      "price": 98.99,
+      "rating": 4.8
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001890157",
+      "name": "American",
+      "description": "Whiskey prepared in the American fashion.",
+      "price": 69.99,
+      "rating": 4.2
+    }
+  }
+]
