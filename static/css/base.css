@@ -214,8 +214,12 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: #fff;
+    background: #f9f9f9;
     z-index: -1;
+}
+
+.logo-font {
+    text-transform: uppercase;
 }
 
 .update-link,
