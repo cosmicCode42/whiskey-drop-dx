@@ -94,6 +94,11 @@ As a user of the site, I want:
 	- Solution: I hadn't added a `{% block postloadjs %}` to my `base.html`, which is where the `quantity_input_script` was located. Adding the postloadjs block immediately fixed the issue.
 - Problem: I could not adjust items in the cart or remove them from the cart.
 	- Solution: I was missing a few key adjustments to my code (using the slim version of jQuery instead of the normal version, using `url adjust_cart` instead of `url 'adjust_cart'`, not adding a `/` to the end of the JavaScript and so on). After fixing all of these small issues, I was able to adjust and remove items from the cart without issue.
+- Problem: When completing an order, the grand total was displayed as 0.00 on the `checkout_success` page and registered as 0.00 in the Orders database on the admin side.
+	- Solution: I was missing an integral bit of code in the checkout app `apps.py` file. Adding this code fixed the issue immediately.<br>
+		`def ready(self):`<br>
+        - `import checkout.signals`<br>
+- Problem: 
 
 ## Technologies Used
 
