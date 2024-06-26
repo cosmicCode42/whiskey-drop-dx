@@ -81,12 +81,12 @@
                         {% endfor %}
                         <tr>
                             <td colspan="5" class="pt-5 text-right">
-                                <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="5" class="text-right">
-                                <a href="#" class="btn btn--cta btn--red rounded-0">
+                                <a href="{% url 'checkout' %}" class="btn btn--cta btn--red rounded-0">
                                     <span class="text-uppercase">Secure Checkout</span>
                                     <span class="icon">
                                         <i class="fas fa-lock"></i>
@@ -97,7 +97,7 @@
                     </table>
                 </div>
             {% else %}
-                <p class="lead mb-5">Your bag is empty. Please select some of our fine whiskey from the menu above.</p>
+                <p class="lead mb-5">Your cart is empty. Please select some of our fine whiskey from the menu above.</p>
             {% endif %}
         </div>
     </div>
