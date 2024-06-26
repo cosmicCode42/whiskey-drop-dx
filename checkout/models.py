@@ -29,8 +29,7 @@ class Order(models.Model):
     
     def update_total(self):
         """
-        Update grand total each time a line item is added,
-        accounting for delivery costs
+        Update grand total each time a line item is added
         """
         self.grand_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.save()
@@ -56,8 +55,8 @@ class OrderLineItem(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the order number
-        if it hasn't been set already
+        Override the original save method to set the lineitem total
+        and update the order total.
         """
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
