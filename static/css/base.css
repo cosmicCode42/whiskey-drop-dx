@@ -50,12 +50,6 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* .quotes-container {}
-
-.features-container {}
-
-.month-fav-container {} */
-
 /* Page Headers */
 
 .page-header {
@@ -142,7 +136,7 @@ body {
 
 .jumbotron h1 {
     color: #fff;
-    font-weight: bold;
+    /* font-weight: bold; */
     margin-bottom: 30px;
 }
 
