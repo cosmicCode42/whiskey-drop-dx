@@ -11,3 +11,9 @@
     font-weight: bold;
     margin-bottom: 30px;
 }
+
+/* misc */
+.order-history {
+    max-height: 416px;
+    overflow-y: auto;
+}
