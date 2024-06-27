@@ -22,7 +22,8 @@
                 {% if request.user.is_superuser %}
                         <small class="ml-3">
                             <a href="{% url 'edit_product' product.id %}">Edit</a>
-                            <a class="text-danger" href="#">Delete</a>
+                            <!-- <a class="text-danger" href="#">Delete</a> -->
+                            <button class="no-btn text-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
                         </small>
                     {% endif %}
                 <p class="mt-3">{{ product.description }}</p>
@@ -60,6 +61,22 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-2" id="deleteModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger d-flex flex-column justify-content-center align-items-center">
+                <h5 class="modal-title text-white">WARNING!</h5>
+            </div>
+            <div class="modal-body">
+                <p>Are you absolutely certain you want to delete {{ product.name }} from the store?</p>
+                <div class="d-flex flex-row justify-content-center align-items-center">
+                    <a class="text-center btn btn--red" href="{% url 'delete_product' product.id %}">Delete</a> <button type="button" class="text-center btn btn--red" data-dismiss="modal" aria-label="Close">Go back!</button>
+                </div>
             </div>
         </div>
     </div>
