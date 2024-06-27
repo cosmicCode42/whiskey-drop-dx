@@ -5,9 +5,9 @@
     {% trans "Sign In" %}
 {% endblock head_title %}
 {% block inner_content %}
-    {% element h1 %}
-        {% trans "Sign In" %}
-    {% endelement %}
+    <hr>
+    <h2 class="logo-font mb-4">{% trans "Sign In" %}</h2>    
+    <hr>
     {% if not SOCIALACCOUNT_ONLY %}
         {% setvar link %}
             <a href="{{ signup_url }}">

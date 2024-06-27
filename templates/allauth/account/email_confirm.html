@@ -6,9 +6,9 @@
     {% trans "Confirm Email Address" %}
 {% endblock head_title %}
 {% block inner_content %}
-    {% element h1 %}
-        {% trans "Confirm Email Address" %}
-    {% endelement %}
+    <hr>
+    <h2 class="logo-font mb-4">{% trans "Confirm Email Address" %}</h2>    
+    <hr>
     {% if confirmation %}
         {% user_display confirmation.email_address.user as user_display %}
         {% if can_confirm %}

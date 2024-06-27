@@ -5,9 +5,9 @@
     {% translate "Sign In" %}
 {% endblock head_title %}
 {% block inner_content %}
-    {% element h1 %}
-        {% translate "Enter Sign-In Code" %}
-    {% endelement %}
+    <hr>
+    <h2 class="logo-font mb-4">{% trans "Enter Sign-In Code" %}</h2>    
+    <hr>
     {% setvar email_link %}
         <a href="mailto:{{ email }}">{{ email }}</a>
     {% endsetvar %}

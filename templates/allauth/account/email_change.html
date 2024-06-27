@@ -5,9 +5,9 @@
     {% trans "Email Address" %}
 {% endblock head_title %}
 {% block inner_content %}
-    {% element h1 %}
-        {% trans "Email Address" %}
-    {% endelement %}
+    <hr>
+    <h2 class="logo-font mb-4">{% trans "Email Address" %}</h2>    
+    <hr>
     {% if not emailaddresses %}
         {% include "account/snippets/warn_no_email.html" %}
     {% endif %}

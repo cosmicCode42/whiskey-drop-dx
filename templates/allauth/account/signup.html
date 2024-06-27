@@ -4,9 +4,9 @@
     {% trans "Signup" %}
 {% endblock head_title %}
 {% block inner_content %}
-    {% element h1 %}
-        {% trans "Sign Up" %}
-    {% endelement %}
+    <hr>
+    <h2 class="logo-font mb-4">{% trans "Sign Up" %}</h2>    
+    <hr>
     {% setvar link %}
         <a href="{{ login_url }}">
         {% endsetvar %}
