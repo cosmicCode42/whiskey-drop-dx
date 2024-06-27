@@ -75,9 +75,9 @@
                     </li>
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
-                            <li class="nav-item mr-2 d-md-none"><a href="#" class="nav-link">Product Management</a></li>
+                            <li class="nav-item mr-2 d-md-none"><a href="#" class="nav-link">Manage</a></li>
                         {% endif %}
-                    <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'profile' %}">My Profile</a></li>
+                    <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
                     <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
                     {% else %}
                     <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'account_signup' %}">Register</a></li>
@@ -107,7 +107,7 @@
                     {% else %}
                     <p class="navbar-text my-auto mr-2 d-md-none d-lg-inline-block"><em>Great whiskey delivered to your door!</em></p>
                     {% endif %}
-                <a class="navbar-text btn" href="{% url 'profile' %}">My Profile</a>
+                <a class="navbar-text btn" href="{% url 'profile' %}">Profile</a>
                 <a class="navbar-text btn" href="{% url 'account_logout' %}">Logout</a>
                 {% else %}
                 <p class="navbar-text my-auto mr-2 d-md-none d-lg-inline-block"><em>Great whiskey delivered to your door!</em></p>
@@ -115,7 +115,7 @@
                 <a class="navbar-text btn" href="{% url 'account_login' %}">Login</a>
                 {% endif %}
             </div>
-            <div class="d-none d-md-block">
+            <div class="d-none d-md-inline-block">
                 <a href="{% url 'view_cart' %}" class="nav-link navbar-text btn btn--cart">
                     <div class="text-center">
                         <div><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
