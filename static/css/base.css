@@ -278,6 +278,12 @@ body {
     cursor: pointer;
 }
 
+.no-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
 /* pad the top for most pages for navbar on mobile */
 @media (max-width: 426px) {
     .header-container {
