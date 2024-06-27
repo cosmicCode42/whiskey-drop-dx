@@ -8,7 +8,7 @@ body {
 
 .container-wrapper--red {
     background-color: #f05f40;
-    color: white;
+    color: #fff;
 }
 
 /* Containers */
@@ -141,7 +141,7 @@ body {
 }
 
 .jumbotron h1 {
-    color: white;
+    color: #fff;
     font-weight: bold;
     margin-bottom: 30px;
 }
@@ -166,7 +166,7 @@ body {
 }
 
 .btn--red {
-    color: white;
+    color: #fff;
     background-color: #f05f40;
     border-color: #f05f40;
 }
@@ -177,7 +177,7 @@ body {
 .btn--red:active:focus {
     background-color: #df4929;
     border-color: #df4929;
-    color: white;
+    color: #fff;
 }
 
 .feature {
@@ -192,8 +192,8 @@ body {
 }
 /* fancy Read More buttons! */
 .feature .btn {
-    background-color: white;
-    border-color: white;
+    background-color: #fff;
+    border-color: #fff;
     border-radius: 15px;
     min-width: 100px;
     font-weight: bold;
@@ -219,6 +219,35 @@ body {
 .toast-capper {
     height: 2px;
 }
+
+/* ------------------------------- allauth edits */
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #f05f40;
+    border: 1px solid #f05f40;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 1rem;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/*
+    background-color: #;
+    border-color: #f05f40; */
 
 /* ------------------------------- misc */
 
