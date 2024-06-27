@@ -23,36 +23,38 @@ Fourth Milestone Project for the Web Development course offered by Code Institut
 
 ### Project Goals
 
-Whiskey Drop
+The newly revamped Whiskey Drop allows customers to directly purchase a limited number of whiskeys, either as anonymous users or as registered users. Registered users have the added benefit of having their delivery and billing details saved (speeding up subsequent orders by autofilling the checkout form) as well as having their order history available.
 
 ### User Goals
 
 - Simple design.
 - Visually appealing.
 - Easy to navigate.
+- Secure purchases.
 
 ### User Stories
 
-- As a user, I want ?
-- As a user, I want ?
-- As a user, I want ?
-- As a user, I want ?
-- As a user, I want ?
-- As a user, I want ?
+- As a user, I want to be able to browse whiskey easily.
+- As a user, I want to be able to purchase whiskey easily and securely.
+- As a user, I want confirmation of my orders.
+- As a user, I want an account where my information can be stored.
+- As a user, I want to be able to see my order history.
+
+### Superuser Stories
+- As a superuser, I want to be able to add new products to the site easily.
+- As a superuser, I want to be able to edit existing whiskeys on the site.
+- As a superuser, I want to be able to delete products that we no longer offer.
 
 ### Design Choices
 
 #### Interface
 
-Pending.
+Whiskey Drop DX offers a sleek look.
 
 ## Planning
 
 ### Wireframes
-Pending.
-
-### Schema
-Pending.
+No wireframes were created for this project.
 
 ## Testing
 
