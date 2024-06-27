@@ -99,6 +99,7 @@ As a user of the site, I want:
 		`def ready(self):`<br>
         - `import checkout.signals`<br>
 - Problem: 12 hours after closing the workspace, webhooks stopped functioning properly. On Stripe, they returned a 401 (Unauthorised) error. No code had changed between closing the workspace and opening it again.
+	- Solution: ... the webhooks just suddenly started working again. No change was needed. Perhaps there was some downtime or something?
 
 ## Technologies Used
 
@@ -108,6 +109,8 @@ As a user of the site, I want:
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - [Python](https://docs.python.org/3/)
     - [Django](https://docs.djangoproject.com/en/5.0/)
+		- [Django Allauth](https://docs.allauth.org/en/latest/)
+		- [Django Countries](https://pypi.org/project/django-countries/)
 - [PostgreSQL](https://www.postgresql.org/docs/)
 
 <!-- ### Testing
