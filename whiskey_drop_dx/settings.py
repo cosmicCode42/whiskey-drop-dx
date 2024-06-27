@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['whiskey-drop-dx-2e6b5da676f1.herokuapp.com',
-                 'localhost']
+                 '8000-cosmiccode4-whiskeydrop-43yf0k6ra5y.ws.codeinstitute-ide.net']
 
 
 # Application definition
