@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-ebfjkaa&4ezc(teyq0vq$za888%r8e_i7e#!(h-6#(g$qwbvx3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['whiskey-drop-dx.herokuapp.com',
+ALLOWED_HOSTS = ['whiskey-drop-dx-2e6b5da676f1.herokuapp.com',
                  'localhost']
 
 
