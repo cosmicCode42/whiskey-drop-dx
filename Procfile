@@ -1,1 +1,1 @@
-`web: python run.py1`
+web: gunicorn whiskey_drop_dx.wsgi:application
