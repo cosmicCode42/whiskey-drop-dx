@@ -6,10 +6,6 @@ body {
     height: calc(100vh - 75px);
 }
 
-/* .container-wrapper {
-
-} */
-
 .container-wrapper--red {
     background-color: #f05f40;
     color: white;
@@ -148,7 +144,6 @@ body {
     color: white;
     font-weight: bold;
     margin-bottom: 30px;
-    color: white;
 }
 
 .jumbotron .lead {

@@ -1,0 +1,13 @@
+/* Containers */
+
+.callout-container {
+    height: 60vh;
+}
+
+/* Jumbotron */
+
+.jumbotron h2 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+}

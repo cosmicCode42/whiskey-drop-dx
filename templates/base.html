@@ -74,7 +74,7 @@
                         </div>
                     </li>
                     {% if request.user.is_authenticated %}
-                    <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="#">My Profile</a></li>
+                    <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'profile' %}">My Profile</a></li>
                     <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
                     {% else %}
                     <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'account_signup' %}">Register</a></li>
@@ -85,7 +85,7 @@
             <div class="d-none d-md-block">
                 <p class="navbar-text my-auto mr-2 d-md-none d-lg-inline-block"><em>Great whiskey delivered to your door!</em></p>
                 {% if request.user.is_authenticated %}
-                <a class="navbar-text btn" href="#">My Profile</a>
+                <a class="navbar-text btn" href="{% url 'profile' %}">My Profile</a>
                 <a class="navbar-text btn" href="{% url 'account_logout' %}">Logout</a>
                 {% else %}
                 <a class="navbar-text btn" href="{% url 'account_signup' %}">Register</a>
