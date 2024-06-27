@@ -75,7 +75,7 @@
                     </li>
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
-                            <li class="nav-item mr-2 d-md-none"><a href="#" class="nav-link">Manage</a></li>
+                            <li class="nav-item mr-2 d-md-none"><a href="{% url 'add_product' %}" class="nav-link">Manage</a></li>
                         {% endif %}
                     <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
                     <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
@@ -103,7 +103,7 @@
             <div class="d-none d-md-block">
                 {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
-                        <a class="navbar-text btn btn--manage" href="#">Manage</a>
+                        <a class="navbar-text btn btn--manage" href="{% url 'add_product' %}">Manage</a>
                     {% else %}
                     <p class="navbar-text my-auto mr-2 d-md-none d-lg-inline-block"><em>Great whiskey delivered to your door!</em></p>
                     {% endif %}
