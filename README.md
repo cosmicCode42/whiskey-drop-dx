@@ -131,7 +131,7 @@ Deploy to Heroku or a similar website hosting and rendering service. The html fi
 2. Create a new PostgreSQL database. On Aiven, this is done by creating a new service. You must create a project beforehand, then add the service inside that project.
 3. Copy the database URL (service URI on Aiven).
 4. Make sure to create a `requirements.txt` file with the terminal command `pip freeze --local > requirements.txt`. Make sure to save the file and add, commit and push it to your repository. (Unnecessary here since this project already has a requirements.txt file.)
-5. Make sure to create a Procfile and add the command `web: python run.py1` into it. Make sure to save the file and add, commit and push it to your repository. (Unnecessary here since this project already has a Procfile.)
+5. Make sure to create a Procfile and add the command `web: gunicorn whiskey_drop_dx.wsgi:application` into it. Make sure to save the file and add, commit and push it to your repository. (Unnecessary here since this project already has a Procfile.)
 6. Your `__init__.py` file will require a few lines of code (my `__init__.py` already has these so if copying mine this can be safely ignored). Refer to [oc-archive-troubleshoot](oc-archive-troubleshoot.txt) for the exact code.
 Make sure to save the file and add, commit and push it to your repository.
 8. Log in to [Heroku](https://www.heroku.com/).
