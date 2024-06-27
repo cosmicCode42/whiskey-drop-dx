@@ -90,7 +90,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.contrib.messages.context_processors.media',
+                'django.template.context_processors.media',
                 'products.contexts.products',
                 'cart.contexts.cart_contents',
             ],
