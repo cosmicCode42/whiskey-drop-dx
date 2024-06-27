@@ -58,42 +58,65 @@
             <!-- The menu buttons wrapped in a div to be collapsible via the above code -->
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto">
-                    <li class="active nav-item mr-2"><a class="nav-link nav-bold" href="/">Home</a></li>
+                    <li class="nav-item mr-2"><a class="nav-link nav-bold" href="/">Home</a></li>
                     <li class="nav-item mr-2"><button class="nav-link btn" data-toggle="modal" data-target="#aboutModal">About</button></li>
                     <!-- A dropdown menu inside the collapsible - this leads to a selection of whiskeys -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link  nav-bold dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        <a class="nav-link nav-bold dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Whiskeys
                         </a>
                         <!-- Here is the selection of whiskeys -->
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div class="dropdown-menu navbar-dark" aria-labelledby="navbarDropdownMenuLink">
                             {% for product in products %}
-                            <a class="dropdown-item nav-bold" href="{% url 'product_detail' product.id %}">{{ product.name }}</a>
+                            <a class="dropdown-item nav-bold nav-link" href="{% url 'product_detail' product.id %}">{{ product.name }}</a>
                             {% endfor %}
                         </div>
                     </li>
                     {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                            <li class="nav-item mr-2 d-md-none"><a href="#" class="nav-link">Product Management</a></li>
+                        {% endif %}
                     <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'profile' %}">My Profile</a></li>
                     <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
                     {% else %}
                     <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'account_signup' %}">Register</a></li>
                     <li class="nav-item mr-2 d-md-none"><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
                     {% endif %}
+                    <li class="nav-item mr-2 d-md-none">
+                        <a href="{% url 'view_cart' %}" class="nav-link">
+                            <div class="text-center">
+                                <div><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                        £{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        £0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
+            <!-- Dropdown end. -->
             <div class="d-none d-md-block">
-                <p class="navbar-text my-auto mr-2 d-md-none d-lg-inline-block"><em>Great whiskey delivered to your door!</em></p>
                 {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <a class="navbar-text btn btn--manage" href="#">Manage</a>
+                    {% else %}
+                    <p class="navbar-text my-auto mr-2 d-md-none d-lg-inline-block"><em>Great whiskey delivered to your door!</em></p>
+                    {% endif %}
                 <a class="navbar-text btn" href="{% url 'profile' %}">My Profile</a>
                 <a class="navbar-text btn" href="{% url 'account_logout' %}">Logout</a>
                 {% else %}
+                <p class="navbar-text my-auto mr-2 d-md-none d-lg-inline-block"><em>Great whiskey delivered to your door!</em></p>
                 <a class="navbar-text btn" href="{% url 'account_signup' %}">Register</a>
                 <a class="navbar-text btn" href="{% url 'account_login' %}">Login</a>
                 {% endif %}
             </div>
-            <div class="d-inline-item">
-                <a href="{% url 'view_cart' %}" class="nav-link">
+            <div class="d-none d-md-block">
+                <a href="{% url 'view_cart' %}" class="nav-link navbar-text btn btn--cart">
                     <div class="text-center">
                         <div><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
                         <p class="my-0">

@@ -165,6 +165,10 @@ body {
     width: 160px;
 }
 
+.btn--cart {
+    color: #df4929;
+}
+
 .btn--red {
     color: #fff;
     background-color: #f05f40;
