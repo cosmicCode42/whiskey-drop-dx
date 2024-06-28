@@ -1,0 +1,9 @@
+WHISKEY DROP DX TEST ACCOUNTS
+Superuser:
+- Username: Admin42
+	- Password: TestingThis
+
+Regular users:
+- Username: Test
+	- Email: test@test.com
+	- Password: letmeinpls
