@@ -288,7 +288,7 @@ body {
         height: calc(100vh - 82px);
     }
 
-    .jumbotron-header {
-        display: none;
-    }
+    /* .callout-container {
+        height: 50vh;
+    } */
 }
