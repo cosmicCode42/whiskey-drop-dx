@@ -141,9 +141,9 @@ The developer used **W3C CSS Validation Service** and **W3C Markup Validation Se
 
 To make sure the site renders acceptably across several screen sizes, I made liberal use of the DevTools offered by Google Chrome, as well as testing load times, mobile and desktop, with the Lighthouse Chrome extension.
 
-[Test for main page desktop version.](docs/main-page-desktop-report.html)
+[Test for main page desktop version.](https://cosmiccode42.github.io/lighthouse-tests/whiskey-drop-dx-main-page-desktop-report.html)
 
-[Test for main page mobile version.](docs/main-page-mobile-report.html)
+[Test for main page mobile version.](https://cosmiccode42.github.io/lighthouse-tests/whiskey-drop-dx-main-page-mobile-report.html)
 
 ### User Stories Testing
 
