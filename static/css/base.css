@@ -128,6 +128,11 @@ body {
     font-weight: bold;
 }
 
+div a.dropdown-item.nav-bold.nav-link:hover {
+    background-color: #f9f9f9;
+    color: #000;
+}
+
 /* Jumbotron */
 
 .jumbotron {
