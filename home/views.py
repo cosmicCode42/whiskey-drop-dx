@@ -9,8 +9,11 @@ def index(request):
 
     quotes = Quote.objects.all()
 
+    favourites = Favourite.objects.all()
+
     context = {
         'quotes': quotes,
+        'favourites': favourites,
     }
 
     return render(request, 'home/index.html', context)

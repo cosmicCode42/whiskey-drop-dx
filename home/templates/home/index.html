@@ -110,17 +110,19 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th>#</th>
                         <th>Name</th>
                         <th>Origin</th>
                     </tr>
                 </thead>
 
-                <!-- for favourite in favourites|sort(attribute="rank") -->
+                {% for favourite in favourites|dictsort:"rank" %}
                 <tr>
-                    <td>{{ favourite.favourite.name }}</td>
-                    <td>{{ favourite.favourite.country_of_origin }}</td>
+                    <td><strong>{{ favourite.rank }}</strong></td>
+                    <td>{{ favourite.name }}</td>
+                    <td>{{ favourite.country_of_origin }}</td>
                 </tr>
-                <!-- endfor -->
+                {% endfor %}
             </table>
         </section>
     </div>
