@@ -5,7 +5,7 @@
 
 {% block content %}
 <!-- Callout -->
-<div class="container-fluid callout-container">    
+<div class="container-fluid callout-container">
     <div class="opaque-overlay">&nbsp;</div>
     <div class="row">
         <div class="col-12">
@@ -13,7 +13,8 @@
                 <h1 class="jumbotron-header">The finest whiskeys delivered to your doorstep.</h1>
                 <hr class="block-divider block-divider--orange">
                 {% if not request.user.is_authenticated %}
-                <p class="lead">Sign up today for faster checkout. Registered users will gain discounts with enough purchases!</p>
+                <p class="lead">Sign up today for faster checkout. Registered users will gain discounts with enough
+                    purchases!</p>
                 <a class="btn btn--red btn--cta btn-lg" href="{% url 'account_signup' %}">Sign
                     Up!</a>
                 {% endif %}
@@ -25,128 +26,104 @@
 </div>
 <!-- Callout done. -->
 
-    <!-- Quotes -->
-    <div class="container-wrapper">
-        <div class="container quotes-container content-container">
-            <section class="quotes">
-                <div class="row">
-                    <div class="col-12 page-header">
-                        <h2 class="text-uppercase">Quotes:</h2>
-                        <hr class="block-divider block-divider--short">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="media">
-                            <div class="d-none d-sm-block">
-                                <img src="{{ MEDIA_URL }}girl-image.png" class="rounded-circle mr-3" height="100"
-                                    width="100" alt="Jane Doe">
-                            </div>
-                            <div class="media-body">
-                                <blockquote class="blockquote">
-                                    <p>I've been introduced to more than 10 great international whiskeys I never knew
-                                        about.
-                                    </p>
-                                    <p>- Jane Doe</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="media">
-                            <div class="d-none d-sm-block">
-                                <img src="{{ MEDIA_URL }}guy-image.png" class="rounded-circle mr-3" height="100"
-                                    width="100" alt="John Smith">
-                            </div>
-                            <div class="media-body">
-                                <blockquote class="blockquote">
-                                    <p>I haven't been sober for months!</p>
-                                    <p>- John Smith</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <!-- Quotes done; section done. -->
-
-    <!-- Features -->
-    <div class="container-wrapper container-wrapper--red">
-        <div class="container features-container content-container">
-            <section class="features">
-                <div class="row">
-                    <div class="col-12 page-header">
-                        <h2 class="text-uppercase">Features:</h2>
-                        <hr class="block-divider block-divider--short block-divider--white">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="feature">
-                            <h3><i class="fas fa-gift d-none d-sm-block"></i> Feature 1 <span
-                                    class="badge badge-success">New!</span></h3>
-                            <p>Description here.</p>
-                            <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="feature">
-                            <h3><i class="fas fa-credit-card d-none d-sm-block"></i> Feature 2</h3>
-                            <p>Description here.</p>
-                            <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
-                        </div>
-                    </div>
-                    <div class="col-12 d-md-none d-lg-block col-lg-4">
-                        <div class="feature">
-                            <h3><i class="fas fa-times-circle d-none d-sm-block"></i> Feature 3</h3>
-                            <p>Description here.</p>
-                            <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <!-- Features end here. -->
-
-    <!-- Monthly Favourites -->
-    <div class="container-wrapper">
-        <div class="container month-fav-container content-container">
-            <section class="faves">
+<!-- Quotes -->
+<div class="container-wrapper">
+    <div class="container quotes-container content-container">
+        <section class="quotes">
+            <div class="row">
                 <div class="col-12 page-header">
-                    <h2 class="text-uppercase">Monthly favorites</h2>
+                    <h2 class="text-uppercase">Quotes:</h2>
                     <hr class="block-divider block-divider--short">
                 </div>
-                <table class="table">
+            </div>
+            <div class="row">
+                {% for quote in quotes %}
+                <div class="col-12 col-md-6">
+                    <div class="media">
+                        <div class="d-none d-sm-block">
+                            <img src="{{ MEDIA_URL }}{{ quote.image }}" class="rounded-circle mr-3" height="100"
+                                width="100" alt="Jane Doe">
+                        </div>
+                        <div class="media-body">
+                            <blockquote class="blockquote">
+                                <p>{{ quote.quote }}
+                                </p>
+                                <p>- {{ quote.name }}</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</div>
+<!-- Quotes done; section done. -->
+
+<!-- Features -->
+<div class="container-wrapper container-wrapper--red">
+    <div class="container features-container content-container">
+        <section class="features">
+            <div class="row">
+                <div class="col-12 page-header">
+                    <h2 class="text-uppercase">Features:</h2>
+                    <hr class="block-divider block-divider--short block-divider--white">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="feature">
+                        <h3><i class="fas fa-gift d-none d-sm-block"></i> Feature 1 <span
+                                class="badge badge-success">New!</span></h3>
+                        <p>Description here.</p>
+                        <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="feature">
+                        <h3><i class="fas fa-credit-card d-none d-sm-block"></i> Feature 2</h3>
+                        <p>Description here.</p>
+                        <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                    </div>
+                </div>
+                <div class="col-12 d-md-none d-lg-block col-lg-4">
+                    <div class="feature">
+                        <h3><i class="fas fa-times-circle d-none d-sm-block"></i> Feature 3</h3>
+                        <p>Description here.</p>
+                        <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- Features end here. -->
+
+<!-- Monthly Favourites -->
+<div class="container-wrapper">
+    <div class="container month-fav-container content-container">
+        <section class="faves">
+            <div class="col-12 page-header">
+                <h2 class="text-uppercase">Monthly favorites</h2>
+                <hr class="block-divider block-divider--short">
+            </div>
+            <table class="table">
+                <thead>
                     <tr>
                         <th>Name</th>
                         <th>Origin</th>
                     </tr>
-                    <tr>
-                        <td>First</td>
-                        <td>Japan</td>
-                    </tr>
-                    <tr>
-                        <td>Second</td>
-                        <td>Ireland</td>
-                    </tr>
-                    <tr>
-                        <td>Third</td>
-                        <td>Scotland</td>
-                    </tr>
-                    <tr>
-                        <td>Fourth</td>
-                        <td>America</td>
-                    </tr>
-                    <tr>
-                        <td>Fifth</td>
-                        <td>Ireland</td>
-                    </tr>
-                </table>
-            </section>
-        </div>
+                </thead>
+
+                <!-- for favourite in favourites|sort(attribute="rank") -->
+                <tr>
+                    <td>{{ favourite.favourite.name }}</td>
+                    <td>{{ favourite.favourite.country_of_origin }}</td>
+                </tr>
+                <!-- endfor -->
+            </table>
+        </section>
     </div>
-    <!-- Monthly favourites end here. -->
+</div>
+<!-- Monthly favourites end here. -->
 {% endblock %}
