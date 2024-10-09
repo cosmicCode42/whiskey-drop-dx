@@ -1,7 +1,7 @@
 [
   {
     "pk": 1,
-    "model": "home.favourites",
+    "model": "home.favourite",
     "fields": {
       "rank": "2",
       "name": "Irish",
@@ -10,7 +10,7 @@
   },
   {
     "pk": 2,
-    "model": "home.favourites",
+    "model": "home.favourite",
     "fields": {
       "rank": "4",
       "name": "Scotch",
@@ -19,7 +19,7 @@
   },
   {
     "pk": 3,
-    "model": "home.favourites",
+    "model": "home.favourite",
     "fields": {
       "rank": "1",
       "name": "Japanese",
