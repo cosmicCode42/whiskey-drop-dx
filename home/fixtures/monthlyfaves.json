@@ -28,7 +28,7 @@
   },
   {
     "pk": 4,
-    "model": "favourites.favourite",
+    "model": "home.favourite",
     "fields": {
       "rank": "3",
       "name": "American",
