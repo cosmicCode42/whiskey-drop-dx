@@ -1,7 +1,7 @@
 [
   {
     "pk": 1,
-    "model": "quoutes.quote",
+    "model": "home.quote",
     "fields": {
       "image": "girl-image.png",
       "name": "Jane Doe",
@@ -10,7 +10,7 @@
   },
   {
     "pk": 2,
-    "model": "quoutes.quote",
+    "model": "home.quote",
     "fields": {
       "image": "guy-image.png",
       "name": "John Smith",
