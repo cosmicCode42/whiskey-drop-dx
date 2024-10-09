@@ -1,0 +1,38 @@
+[
+  {
+    "pk": 1,
+    "model": "favourites.favourite",
+    "fields": {
+      "rank": "2",
+      "name": "Irish",
+      "country_of_origin": "Ireland"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "favourites.favourite",
+    "fields": {
+      "rank": "4",
+      "name": "Scotch",
+      "country_of_origin": "Scotland"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "favourites.favourite",
+    "fields": {
+      "rank": "1",
+      "name": "Japanese",
+      "country_of_origin": "Japan"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "favourites.favourite",
+    "fields": {
+      "rank": "3",
+      "name": "American",
+      "country_of_origin": "North America"
+    }
+  }
+]

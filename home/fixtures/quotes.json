@@ -1,0 +1,20 @@
+[
+  {
+    "pk": 1,
+    "model": "quoutes.quote",
+    "fields": {
+      "image": "girl-image.png",
+      "name": "Jane Doe",
+      "quote": "I've been introduced to more than 10 great international whiskeys I never knew about."
+    }
+  },
+  {
+    "pk": 2,
+    "model": "quoutes.quote",
+    "fields": {
+      "image": "guy-image.png",
+      "name": "John Smith",
+      "quote": "I haven't been sober for months!"
+    }
+  }
+]
