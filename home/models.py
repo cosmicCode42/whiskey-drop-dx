@@ -16,7 +16,7 @@ class Quote(models.Model):
     quote = models.CharField(max_length=254)
     
 
-class Favourites(models.Model):
+class Favourite(models.Model):
     
     rank = models.DecimalField(max_digits=3, decimal_places=0)
     name = models.CharField(max_length=254)
