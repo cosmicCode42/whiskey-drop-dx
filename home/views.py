@@ -6,14 +6,14 @@ from .models import Quote, Favourite, Feature
 
 def index(request):
     """ A view to return the index page """
-
     quotes = Quote.objects.all()
-
     favourites = Favourite.objects.all()
+    features = Feature.objects.all()
 
     context = {
         'quotes': quotes,
         'favourites': favourites,
+        'features': features,
     }
 
     return render(request, 'home/index.html', context)
