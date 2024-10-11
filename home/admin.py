@@ -4,17 +4,19 @@ from .models import Feature, Quote, Favourite
 # Register your models here.
 class FeatureAdmin(admin.ModelAdmin):
     list_display = (
-        'icon',
         'name',
+        'icon',
         'description',
         'is_new',
     )
 
+    ordering = ('pk',)
+
 
 class QuoteAdmin(admin.ModelAdmin):
     list_display = (
-        'image',
         'name',
+        'image',
         'quote',
     )
 
